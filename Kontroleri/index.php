@@ -1,9 +1,14 @@
 <?php
 
-class Index{
+class Index extends Kontroler{
+
 	function __construct(){
-		echo 'Ovo je index kontroler';
+		parent::__construct();
 	}
 
+	//Podrazumevani kontroler
+	public function index(){
+		$this->pogled->render('sadrzaj');
+	}
 
 }
