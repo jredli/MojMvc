@@ -36,7 +36,13 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="<?php echo root; ?>index">Pocetna</a>
-                    </li>                    
+                    </li>  
+                    <?php Sesija::init(); ?>
+                    <?php if (Sesija::vrati('ulogovan') == true):?>
+                     <li>
+                        <a href="<?php echo root; ?>upravljanje/logout">Logout</a>
+                    </li>  
+                    <?php endif; ?>               
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
